@@ -18,20 +18,21 @@
 ### Association
 
 - has_many :items
+- has_many :purchase_info
 
 ## items テーブル
 
-| Column           | Type       | Options                        |
-| ---------------- | ---------- | ------------------------------ |
-| title            | string     | null: false                    |
-| item_details     | text       | null: false                    |
-| status           | integer    | null: false                    |
-| category         | integer    | null: false                    |
-| delivery_charge  | integer    | null: false                    |
-| delivery_area    | integer    | null: false                    |
-| days_to_delivery | integer    | null: false                    |
-| price            | integer    | null: false                    |
-| user             | references | null: false, foreign_key: true |
+| Column              | Type       | Options                        |
+| ------------------- | ---------- | ------------------------------ |
+| title               | string     | null: false                    |
+| item_details        | text       | null: false                    |
+| status_id           | integer    | null: false                    |
+| category_id         | integer    | null: false                    |
+| delivery_charge_id  | integer    | null: false                    |
+| delivery_area_id    | integer    | null: false                    |
+| days_to_delivery_id | integer    | null: false                    |
+| price               | integer    | null: false                    |
+| user                | references | null: false, foreign_key: true |
 
 ### Association
 
