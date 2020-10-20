@@ -54,14 +54,15 @@
 
 ## purchase_address テーブル
 
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| postal_code   | string     | null: false                    |
-| prefectures   | integer    | null: false                    |
-| city          | string     | null: false                    |
-| address       | integer    | null: false                    |
-| phone_number  | integer    | null: false                    |
-| purchase_info | references | null: false, foreign_key: true |
+| Column          | Type       | Options                        |
+| --------------- | ---------- | ------------------------------ |
+| postal_code     | string     | null: false                    |
+| prefectures     | integer    | null: false                    |
+| city            | string     | null: false                    |
+| building number | string     | null: false                    |
+| address         | string     | null: false                    |
+| phone_number    | string     | null: false                    |
+| purchase_info   | references | null: false, foreign_key: true |
 
 ### Association
 
