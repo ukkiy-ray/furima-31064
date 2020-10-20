@@ -18,7 +18,7 @@
 ### Association
 
 - has_many :items
-- has_many :purchase_info
+- has_many :buyers
 
 ## items テーブル
 
@@ -37,9 +37,9 @@
 ### Association
 
 - belongs_to :user
-- has_one :purchase_info
+- has_one :buyer
 
-## purchase_info テーブル
+## buyers テーブル
 
 | Column  | Type       | Options                        |
 | --------| ---------- | ------------------------------ |
@@ -67,4 +67,4 @@
 
 ### Association
 
-- belongs_to :purchase_info
+- belongs_to :buyer
