@@ -18,4 +18,8 @@ class Item < ApplicationRecord
   validates :delivery_charge_id, numericality: { other_than: 1 }
   validates :delivery_area_id, numericality: { other_than: 1 }
   validates :delivery_period_id, numericality: { other_than: 1 }
+
+  #価格設定を¥300~¥9,999,999に指定
+  validates :price, numericality: { greater_than_or_equal_to: 300 }
+  validates :price, numericality: { less_than_or_equal_to: 9999999 }
 end
