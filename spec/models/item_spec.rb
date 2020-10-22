@@ -32,7 +32,7 @@ RSpec.describe Item, type: :model do
       end
 
       it "status_idが1の場合登録できない" do
-        @item.status_id = '1'
+        @item.status_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Status must be other than 1")
       end
@@ -44,7 +44,7 @@ RSpec.describe Item, type: :model do
       end
 
       it "category_id" do
-        @item.category_id = '1'
+        @item.category_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Category must be other than 1")
       end
@@ -56,7 +56,7 @@ RSpec.describe Item, type: :model do
       end
 
       it "delivery_charge_idが1の場合登録できない" do
-        @item.delivery_charge_id = '1'
+        @item.delivery_charge_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery charge must be other than 1")
       end
@@ -68,7 +68,7 @@ RSpec.describe Item, type: :model do
       end
 
       it "delivery_area_idが1の場合登録できない" do
-        @item.delivery_area_id = '1'
+        @item.delivery_area_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery area must be other than 1")
       end
@@ -80,7 +80,7 @@ RSpec.describe Item, type: :model do
       end
 
       it "delivery_period_idが1の場合登録できない" do
-        @item.delivery_period_id = '1'
+        @item.delivery_period_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery period must be other than 1")
       end
