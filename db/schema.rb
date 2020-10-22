@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2020_10_22_033106) do
     t.integer "category_id"
     t.integer "delivery_charge_id"
     t.integer "delivery_area_id"
-    t.integer "days_to_delivery_id"
+    t.integer "delivery_period_id"
     t.integer "price"
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
