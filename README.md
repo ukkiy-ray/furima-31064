@@ -30,7 +30,7 @@
 | category_id         | integer    | null: false                    |
 | delivery_charge_id  | integer    | null: false                    |
 | delivery_area_id    | integer    | null: false                    |
-| days_to_delivery_id | integer    | null: false                    |
+| delivery_period_id  | integer    | null: false                    |
 | price               | integer    | null: false                    |
 | user                | references | null: false, foreign_key: true |
 
