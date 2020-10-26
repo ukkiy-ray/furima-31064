@@ -7,7 +7,7 @@ class UserOrder
      validates :prefecture
      validates :city
      validates :address
-     validates :phone_number, format: {with: /\A\d{10,11}\z/, message: "は11桁以内の半角数字で入力してください"}
+     validates :phone_number, format: {with: /\A\d{10,11}\z/, message: "はハイフン無し10桁もしくは11桁の半角数字で入力してください"}
      validates :token
   end
 

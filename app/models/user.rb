@@ -20,6 +20,6 @@ class User < ApplicationRecord
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
   validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字の両方を含めて設定してください' 
 
-  has_many :items
-  has_many :buyers
+  has_many :items, foreign_key: :user_id, dependent: :destroy
+  has_many :buyers, foreign_key: :user_id, dependent: :destroy
 end

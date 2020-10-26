@@ -46,10 +46,22 @@ RSpec.describe UserOrder, type: :model do
       expect(@user_order.errors.full_messages).to include("Phone number can't be blank")
     end
 
-    it 'phone_numberが正しく形式でないと保存できないこと' do
+    it 'phone_numberが10桁以下だと保存できないこと' do
       @user_order.phone_number = 1
       @user_order.valid?
-      expect(@user_order.errors.full_messages).to include("Phone number は11桁以内の半角数字で入力してください")
+      expect(@user_order.errors.full_messages).to include("Phone number はハイフン無し10桁もしくは11桁の半角数字で入力してください")
+    end
+
+    it 'phone_numberが11桁以上だと保存できないこと' do
+      @user_order.phone_number = '111111111111'
+      @user_order.valid?
+      expect(@user_order.errors.full_messages).to include("Phone number はハイフン無し10桁もしくは11桁の半角数字で入力してください")
+    end
+
+    it 'phone numberにハイフンが含まれていると保存できないこと' do
+      @user_order.phone_number = '090-1111-1111'
+      @user_order.valid?
+      expect(@user_order.errors.full_messages).to include("Phone number はハイフン無し10桁もしくは11桁の半角数字で入力してください")
     end
     
     it  'tokenが空だと保存できないこと' do
