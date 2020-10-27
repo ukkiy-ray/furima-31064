@@ -50,20 +50,20 @@
 
 - belongs_to :item
 - belongs_to :user
-- has_one :purchase_address
+- has_one :address
 
 
-## purchase_address テーブル
+## address テーブル
 
 | Column          | Type       | Options                        |
 | --------------- | ---------- | ------------------------------ |
 | postal_code     | string     | null: false                    |
-| prefectures     | integer    | null: false                    |
+| prefecture      | integer    | null: false                    |
 | city            | string     | null: false                    |
-| building number | string     | null: false                    |
+| building_number | string     | null: false                    |
 | address         | string     | null: false                    |
 | phone_number    | string     | null: false                    |
-| purchase_info   | references | null: false, foreign_key: true |
+| buyer           | references | null: false, foreign_key: true |
 
 ### Association
 

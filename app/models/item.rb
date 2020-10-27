@@ -6,7 +6,8 @@ class Item < ApplicationRecord
   belongs_to_active_hash :delivery_area
   belongs_to_active_hash :delivery_period
 
-  belongs_to :user
+  belongs_to :user, optional: true
+  has_one :buyer
   has_one_attached :image
 
   #空の投稿を保存できないようにする
